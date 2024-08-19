@@ -68,3 +68,11 @@ ScrollReveal().reveal(".service__list li", {
   interval: 500,
   origin: "right",
 });
+
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach((faq) => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active");
+    })
+})
