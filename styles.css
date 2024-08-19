@@ -39,8 +39,6 @@ img {
 FIM PROPRIEDADE CORPO DO SITE 
 ================================*/
 
-
-
 /*==============================
 FORMA EM BAIXO DA IMAGEM 
 ================================*/
@@ -48,6 +46,7 @@ FORMA EM BAIXO DA IMAGEM
   max-width: var(--max-width);
   margin: auto;
   padding: 2rem 1rem;
+  margin-bottom: 4rem; /* Espaço entre seções */
 }
 
 .section__subheader {
@@ -103,8 +102,6 @@ FORMA EM BAIXO DA IMAGEM
 FIM FORMA EM BAIXO DA IMAGEM 
 ================================*/
 
-
-
 /*==============================
 MENU E TITULO PRINCIPAL E IMAGEM BANNER
 ================================*/
@@ -125,27 +122,27 @@ nav {
   z-index: 9;
 }
 
-.nav__bar {
+/* .nav__bar {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   background-color: var(--primary-color);
-}
+} */
 
-.nav__menu__btn {
+/* .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
-}
+} */
 
 .nav__links {
   list-style: none;
   position: absolute;
   width: 100%;
   padding: 2rem;
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
@@ -200,50 +197,6 @@ nav {
 FIM MENU E TITULO PRINCIPAL E IMAGEM BANNER
 ================================*/
 
-
-
-/*==============================
-COMPLEMENTO FORMA EM BAIXO DA IMAGEM 
-================================*/
-.booking__container {
-  padding-block: 0;
-}
-
-.booking__form {
-  padding: 2rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: var(--white);
-  border-radius: 10px;
-  transform: translateY(-50%);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.input__group {
-  flex: 1 1 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.input__group span {
-  font-size: 1.75rem;
-  color: var(--primary-color);
-}
-
-.input__group label {
-  font-weight: 500;
-  color: var(--text-dark);
-}
-/*==============================
-FIM COMPLEMENTO FORMA EM BAIXO DA IMAGEM 
-================================*/
-
-
 /*========================
 INICIO QUEM SOMOS
 ========================== */
@@ -251,6 +204,7 @@ INICIO QUEM SOMOS
   overflow: hidden;
   display: grid;
   gap: 2rem;
+  margin-bottom: 4rem; /* Espaço entre seções */
 }
 
 .about__image img {
@@ -262,67 +216,65 @@ INICIO QUEM SOMOS
 FIM QUEM SOMOS
 ========================== */
 
-
 /*========================
-INICIO CARD
+INICIO PERGUNTAS
 ========================== */
-.faq{
-  /* max-width: 700px; */
+.faq {
   margin-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid black;
   cursor: pointer;
+  margin-bottom: 4rem; /* Espaço entre seções */
 }
 
-.question{
+.question {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.question h3{
+.question h3 {
   font-size: 1.8rem;
 }
 
-.answer{
+.answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.2s ease;
 }
 
-.answer p{
+.answer p {
   padding-top: 1rem;
   line-height: 1.6;
   font-size: 1.1rem;
 }
 
-.faq.active .answer{
+.faq.active .answer {
   max-height: 300px;
   animation: fade 1s ease-in-out;
 }
 
-.faq.active svg{
+.faq.active svg {
   transform: rotate(180deg);
 }
 
-svg{
+svg {
   transition: transform 0.5s ease-in;
 }
 
-@keyframes fade{
-  from{
-      opacity: 0;
-      transform: translateY(-10px);
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  to{
-      opacity: 1;
-      transform: translateY(0px);
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 /*========================
-FIM CARD
+FIM PERGUNTAS
 ========================== */
-
 
 /*========================
 INICIO FUNDADORES
@@ -332,6 +284,7 @@ INICIO FUNDADORES
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 4rem; /* Espaço entre seções */
 }
 
 .founder__card {
@@ -359,8 +312,6 @@ INICIO FUNDADORES
 /*========================
 FIM FUNDADORES
 ========================== */
-
-
 
 /*========================
 RODAPÉ
@@ -428,31 +379,17 @@ RODAPÉ
 FIM RODAPÉ
 ========================== */
 
-
-
-/*===========================
- RESPONSIVIDADE PARA QUALQUER TELA 
- ============================*/
-@media (width > 576px) {
-  .room__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width > 768px) {
-  nav {
-    padding: 2rem 1rem;
+/*========================
+DESIGN RESPONSIVO
+========================== */
+@media screen and (min-width: 576px) {
+  .nav__links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
     position: static;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav__bar {
+    transform: translateY(0);
+    width: auto;
     padding: 0;
     background-color: transparent;
   }
@@ -461,58 +398,57 @@ FIM RODAPÉ
     display: none;
   }
 
-  .nav__links {
-    padding: 0;
-    width: unset;
-    position: static;
-    transform: none;
-    flex-direction: row;
-    background-color: transparent;
-  }
-
   .nav__btn {
     display: block;
   }
 
-  .nav__links a::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: var(--primary-color);
-    transition: 0.3s;
-    transform-origin: left;
-  }
-
-  .nav__links a:hover::after {
-    width: 100%;
+  .header__container {
+    padding-block: 10rem;
   }
 
   .about__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
   }
 
-  .room__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .service__content {
-    grid-column: 2/3;
+  .founders__grid {
+    justify-content: space-between;
   }
 
   .footer__container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width > 1024px) {
-  .room__grid {
-    gap: 2rem;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header__container h1 {
+    font-size: 6rem;
+    line-height: 6.5rem;
   }
 }
-/*===========================
- FIM RESPONSIVIDADE PARA QUALQUER TELA 
- ============================*/
+
+@media screen and (min-width: 992px) {
+  nav {
+    position: static;
+  }
+
+  .nav__bar {
+    background-color: transparent;
+  }
+
+  .header__container {
+    padding-block: 13rem;
+  }
+
+  .about__image img {
+    margin-left: auto;
+  }
+
+  .about__content p {
+    padding-right: 2rem;
+  }
+}
