@@ -1,0 +1,76 @@
+<li><a href="#perguntas">Perguntas</a></li>
+
+<!-- INICIO SEÇÃO CARD -->
+    <section class="section__container room__container" id="perguntas">
+      <p class="section__subheader">Perguntas frequentes</p>
+      <h2 class="section__header">Perguntas?</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>O que é Holding Familiar?</h3>
+
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            deserunt suscipit non itaque possimus! Excepturi, vero odio nisi
+            debitis id non voluptates fuga, odit obcaecati doloremque, quo
+            tempore. Excepturi, deserunt.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>O que é Holding Familiar?</h3>
+
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            deserunt suscipit non itaque possimus! Excepturi, vero odio nisi
+            debitis id non voluptates fuga, odit obcaecati doloremque, quo
+            tempore. Excepturi, deserunt.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>O que é Holding Familiar?</h3>
+
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            deserunt suscipit non itaque possimus! Excepturi, vero odio nisi
+            debitis id non voluptates fuga, odit obcaecati doloremque, quo
+            tempore. Excepturi, deserunt.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- FIM SEÇÃO CARD -->
